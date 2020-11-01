@@ -1,0 +1,21 @@
+server:
+  port: 8088
+spring:
+  profiles:
+    active: druid
+  resources:
+    static-locations: file:D://GG//
+  mvc:
+    static-path-pattern: /gg/**
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  pageSizeZero: false #pageSize=0
+mybatis-plus:
+  mapper-locations: classpath:com/example/demo/mapper/*.xml
+  type-aliases-package: com.example.demo.entity
+  configuration:
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: true
+
